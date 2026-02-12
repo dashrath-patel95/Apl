@@ -1,138 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APL</title>
-  <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanjana Premier League - APL 2025</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section id="home" class="page">
-  <h1>Home</h1>
-</section>
+    <!-- Modern Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <span class="logo-icon">🏏</span>
+                    <span class="logo-text">APL</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <button class="nav-link active" data-section="home">Home</button>
+                <button class="nav-link" data-section="teams">Teams</button>
+                <button class="nav-link" data-section="scores">Scores</button>
+                <button class="nav-link" data-section="about">About</button>
+                <button class="nav-link" data-section="contact">Contact</button>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<section id="villages" class="page">
-  <h1>Villages</h1>
-</section>
+    <!-- Hero/Home Section -->
+    <section id="home" class="section active">
+        <div class="hero-background"></div>
+        <div class="home-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🏆</span>
+                    <span>Season 2026</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">AANJANA</span>
+                    <span class="title-sub">PREMIER LEAGUE</span>
+                </h1>
+                <p class="hero-tagline">श्री राजेश्वर नमः </p>
+                
+                <!-- God Image -->
+                <div class="divine-section">
+                    <div class="divine-glow"></div>
+                    <div class="divine-image">
+                        <img src="https://i.ibb.co/rRrDB8n4/545-1.jpg" alt="Divine Blessing">
+                    </div>
+                </div>
 
-<section id="teams" class="page">
-  <h1>Teams</h1>
-</section>
+                <!-- CTA Buttons -->
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" id="watchLiveBtn">
+                        <span class="btn-icon">🔴</span>
+                        <span>Watch Live</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large" id="viewTeamsBtn">
+                        <span class="btn-icon">🏏</span>
+                        <span>View Teams</span>
+                    </button>
+                </div>
 
-<section id="contact" class="page">
-  <h1>Contact</h1>
-</section>
+                <!-- Stats Banner -->
+                <div class="stats-banner">
+                    <div class="stat-box">
+                        <div class="stat-number">11</div>
+                        <div class="stat-label">Villages</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Teams</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <div class="stat-number">225+</div>
+                        <div class="stat-label">Players</div>
+                    </div>
+                </div>
+            </div>
 
-<section id="about" class="page">
-  <h1>About</h1>
-</section>
-<header>
-  <h1>AANJANA PREMIER LEAGUE</h1>
-  <p>11 Villages • 16 Teams</p>
-</header>
+            <!-- Previous Winners -->
+            <div class="champions-section">
+                <h2 class="section-heading">
+                    <span class="heading-icon">🏆</span>
+                    <span>Hall of Champions</span>
+                </h2>
+                <div class="champions-grid">
+                    <div class="champion-card">
+                        <div class="champion-year">2025</div>
+                        <div class="champion-team">boteshwar tiger karlu</div>
+                        <div class="champion-village">karlu</div>
+                    </div>
+                    <div class="champion-card">
+                        <div class="champion-year">2024</div>
+                        <div class="champion-team">kalbi supeekings aaldi</div>
+                        <div class="champion-village">aaldi</div>
+                    </div>
+                    <div class="champion-card">
+                        <div class="champion-year">2023</div>
+                        <div class="champion-team">boteshwar tiger karlu</div>
+                        <div class="champion-village">karlu</div>
+                      
+                            </div>
+                          
+                </div>
+            </div>
+        </div>
+    </section>
 
-<main>
+    <!-- Teams Section -->
+    <section id="teams" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Our Teams</h2>
+            <p class="section-subtitle">Select a village to explore teams</p>
+        </div>
+        <div class="container">
+            <div id="villageGrid" class="villages-grid">
+                <!-- Villages loaded dynamically -->
+            </div>
+        </div>
+    </section>
 
-  <!-- ================== AALDI ================== -->
-  <section class="village">
-    <h2>Aaldi</h2>
+    <!-- Village Teams View -->
+    <section id="villageTeams" class="section">
+        <div class="container">
+            <button class="btn-back" id="backToVillages">
+                <span>←</span> Back to Villages
+            </button>
+            <div class="section-header">
+                <h2 class="section-title" id="villageTeamsTitle">Teams</h2>
+            </div>
+            <div id="teamsGrid" class="teams-grid">
+                <!-- Teams loaded dynamically -->
+            </div>
+        </div>
+    </section>
 
-    <div class="team">
-      <h3>Aanjana Royal Warriors Aaldi</h3>
-      <ul>
-        <li><strong>NAVEEN (C)</strong></li>
-        <li>RAJU</li>
-        <li>RAMESH</li>
-        <li>JAISA</li>
-        <li>MADHA RAM</li>
-        <li>NAVEEN</li>
-        <li>KHIMARAM</li>
-        <li>BHAWAR LAL</li>
-        <li>HITESH</li>
-        <li>PURA RAM</li>
-        <li>RAMARAM</li>
-        <li>HARSAN</li>
-        <li>KHIMARAM BAG</li>
-        <li>VARDHA RAM</li>
-        <li>NARSA RAM</li>
-      </ul>
-    </div>
+    <!-- Team Detail View -->
+    <section id="teamDetail" class="section">
+        <div class="container">
+            <button class="btn-back" id="backToTeams">
+                <span>←</span> Back to Teams
+            </button>
+            <div class="team-detail-wrapper">
+                <div class="team-hero">
+                    <div class="team-hero-bg"></div>
+                    <div class="team-hero-content">
+                        <div class="team-logo-large">
+                            <img id="teamLogo" src="" alt="Team Logo">
+                        </div>
+                        <div class="team-info-main">
+                            <h2 id="teamName" class="team-name-large"></h2>
+                            <p id="teamVillage" class="team-village-large"></p>
+                            <div class="team-captain-info">
+                                <span class="captain-icon">⭐</span>
+                                <span class="captain-label">Captain:</span>
+                                <span id="teamCaptain" class="captain-name"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-content">
+                    <div class="squad-section">
+                        <h3 class="squad-title">
+                            <span class="squad-icon">👥</span>
+                            Squad Members
+                        </h3>
+                        <div id="playersList" class="players-grid">
+                            <!-- Players loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="team">
-      <h3>Kalbi Super Kings Aaldi</h3>
-      <ul>
-        <li><strong>VINOD (C)</strong></li>
-        <li>JABRA RAM (VC)</li>
-        <li>ASHOK R</li>
-        <li>MUKESH</li>
-        <li>ASHOK MALVI</li>
-        <li>AJAY</li>
-        <li>RAMESH</li>
-        <li>MANGILAL</li>
-        <li>KAMLESH</li>
-        <li>JITENDRA</li>
-        <li>PARAS</li>
-        <li>NARESH</li>
-        <li>ASHOK MUJI</li>
-        <li>DAYARAM</li>
-        <li>OKESH</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Scores Section -->
+    <section id="scores" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Match Center</h2>
+            <p class="section-subtitle">Live scores and results</p>
+        </div>
+        <div class="container">
+            <div class="matches-container">
+                <!-- Live Matches -->
+                <div class="match-category">
+                    <h3 class="category-heading">
+                        <span class="live-pulse"></span>
+                        Live Matches
+                    </h3>
+                    <div id="liveMatches" class="matches-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">🏏</div>
+                            <p>No live matches</p>
+                            <span>Check back during match days!</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ================== PAWLI ================== -->
-  <section class="village">
-    <h2>Pawli</h2>
+                <!-- Upcoming -->
+                <div class="match-category">
+                    <h3 class="category-heading">Upcoming Matches</h3>
+                    <div id="upcomingMatches" class="matches-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">📅</div>
+                            <p>Schedule coming soon</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="team">
-      <h3>Aanjana Tiger Force (ATF)</h3>
-      <ul>
-        <li><strong>KARAN (C)</strong></li>
-        <li>DINESH (VC)</li>
-        <li>LALIT</li>
-        <li>DINU</li>
-        <li>BHAVESH</li>
-        <li>DR PATEL</li>
-        <li>RAMESH</li>
-        <li>MUKESH</li>
-        <li>DINESH</li>
-        <li>RAMU</li>
-        <li>BABULAL</li>
-        <li>KARTARAM</li>
-        <li>VINOD</li>
-        <li>SHRAWAN D</li>
-        <li>SHRAWAN</li>
-      </ul>
-    </div>
+                <!-- Recent -->
+                <div class="match-category">
+                    <h3 class="category-heading">Recent Results</h3>
+                    <div id="recentMatches" class="matches-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">📊</div>
+                            <p>Tournament starting soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="team">
-      <h3>Dudeshwar Kalbi King Pawli</h3>
-      <ul>
-        <li><strong>GANESH (C)</strong></li>
-        <li>HEERARAM (VC)</li>
-        <li>GIGARAM</li>
-        <li>DINESH</li>
-        <li>GOPAL CHAND</li>
-        <li>RAVI</li>
-        <li>SURESH KUMAR</li>
-        <li>KRISHNA</li>
-        <li>JAGDISH</li>
-        <li>ASHOK</li>
-        <li>HOTIRAM</li>
-        <li>SURESH CHOUDHARY</li>
-        <li>DINESH CHOUDHARY</li>
-        <li>KARNARAM</li>
-        <li>KAMLESH</li>
-      </ul>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2 class="section-title">About APL</h2>
+        </div>
+        <div class="container-small">
+            <div class="about-content">
+                <div class="about-card-modern">
+                    <p class="about-paragraph">
+                        The <strong>Aanjana Premier League (APL)</strong> is an annual cricket tournament that brings together 11 villages from the Choudhary Samaj community (sundha pati). This prestigious event celebrates our rich cultural heritage, sportsmanship, and the unbreakable bond between our villages.
+                    </p>
+                    <p class="about-paragraph">
+                        With 16 competitive teams and over 225 players battling for glory, APL has become more than just a tournament it's a celebration of unity, tradition, and the spirit of cricket that runs deep in our Rajasthani roots.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Other villages follow SAME pattern -->
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Get in Touch</h2>
+        </div>
+        <div class="container-small">
+            <div class="contact-card-modern">
+                <div class="contact-icon-large">💬</div>
+                <h3>Have Questions?</h3>
+                <p>Connect with us for tournament updates, participation info, and more.</p>
+                <button class="btn btn-primary btn-large" id="chatBtn">
+                    <span class="btn-icon">💬</span>
+                    <span>Start Chat</span>
+                </button>
+                <p class="contact-note">Direct messaging coming soon
+                whatsapp 9549263989
+                or 9257007974
+            
+                for web related issues </p>
+            </div>
+        </div>
+    </section>
 
-</main>
+    <!-- Modern Footer -->
+    <footer class="footer-modern">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="#" class="social-link facebook" id="facebookLink">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link instagram" id="instagramLink">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-copyright">© 2025 Aanjana Premier League. All rights reserved.</p>
+            <p class="footer-tagline">Unity Through Cricket</p>
+            <p class="footer-credits">
+                Created by <span class="creator-name">DC </span> & Team
+            </p>
+        </div>
+    </footer>
 
-<script src="Data.js"></script>
-<script src="Script.js"></script>
-
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -302,7 +302,7 @@ function setupFooterLinks() {
         instagramLink.href = "https://www.instagram.com/yourusername";
         instagramLink.target = "_blank";
     }
-} ===================================
+ ==================================
 // SCORES SECTION (Backend Ready)
 // ===================================
 const sampleMatchData = {

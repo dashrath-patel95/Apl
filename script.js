@@ -289,7 +289,20 @@ function setupBackButtons() {
 // ===================================
 // FOOTER SOCIAL LINKS
 // ===================================
- ===================================
+function setupFooterLinks() {
+    const facebookLink = document.getElementById('facebookLink');
+    const instagramLink = document.getElementById('instagramLink');
+
+    if (facebookLink) {
+        facebookLink.href = "https://www.facebook.com/yourusername";
+        facebookLink.target = "_blank";
+    }
+
+    if (instagramLink) {
+        instagramLink.href = "https://www.instagram.com/yourusername";
+        instagramLink.target = "_blank";
+    }
+} ===================================
 // SCORES SECTION (Backend Ready)
 // ===================================
 const sampleMatchData = {

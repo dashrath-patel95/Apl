@@ -289,26 +289,7 @@ function setupBackButtons() {
 // ===================================
 // FOOTER SOCIAL LINKS
 // ===================================
-function setupFooterLinks() {
-    const facebookLink = document.getElementById('facebookLink');
-    const instagramLink = document.getElementById('instagramLink');
-    
-    if (facebookLink) {
-        facebookLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Visit our Facebook page for updates!\n(Link will be added soon)');
-        });
-    }
-    
-    if (instagramLink) {
-        instagramLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Follow us on Instagram for updates!\n(Link will be added soon)');
-        });
-    }
-}
-
-// ===================================
+ ===================================
 // SCORES SECTION (Backend Ready)
 // ===================================
 const sampleMatchData = {
